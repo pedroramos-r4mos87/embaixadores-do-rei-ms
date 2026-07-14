@@ -7,7 +7,7 @@ import logoEr from "../../assets/images/transparent-logo-er.png";
 const navigationItems = [
   { label: "Início", path: "/" },
   { label: "Sobre os ER", path: "/sobre" },
-  { label: "ER em MS", path: "/er-em-ms" },
+  { label: "ER no MS", path: "/er-no-ms" },
   { label: "Associações", path: "/associacoes" },
   { label: "Notícias", path: "/noticias" },
   { label: "Eventos", path: "/eventos" },

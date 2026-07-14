@@ -4,8 +4,6 @@ import {
   CalendarDays,
   Download,
   MapPin,
-  MapPinned,
-  Network,
   Newspaper,
   ShieldCheck,
   Users,
@@ -13,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import logoEr from "../../assets/images/transparent-logo-er.png";
 import "./Home.css";
-
+import MsAssociationsMap from "../../components/MsAssociationsMap/MsAssociationsMap";
 const news = [
   {
     id: 1,
@@ -67,6 +65,7 @@ const quickLinks = [
     path: "/sobre",
   },
 ];
+
 
 export default function Home() {
   return (
@@ -218,62 +217,41 @@ export default function Home() {
       </section>
 
       <section className="homeAssociations">
-        <div className="homeContainer homeAssociations__content">
-          <div className="homeAssociations__text">
-            <span className="homeSectionTag">Organização regional</span>
+  <div className="homeContainer homeAssociations__content">
+    <div className="homeAssociations__text">
+      <span className="homeSectionTag homeAssociations__tag">
+        Organização regional
+      </span>
 
-            <h2>Conectando os Embaixadores do Rei em todo o estado</h2>
+      <h2>Conectando os Embaixadores do Rei em todo o estado</h2>
 
-            <p>
-              As associações fortalecem o trabalho regional, aproximando igrejas,
-              conselheiros e embaixadas em diferentes regiões de Mato Grosso do Sul.
-            </p>
+      <p>
+        As associações fortalecem o trabalho regional, aproximando igrejas,
+        conselheiros e embaixadas em diferentes regiões de Mato Grosso do Sul.
+      </p>
 
-            <div className="homeAssociations__actions">
-              <Link
-                to="/associacoes"
-                className="homeButton homeButton--primary"
-              >
-                Conhecer associações
-                <ArrowRight size={18} />
-              </Link>
+      <div className="homeAssociations__actions">
+        <Link
+          to="/associacoes"
+          className="homeButton homeButton--primary"
+        >
+          Conhecer associações
+          <ArrowRight size={18} />
+        </Link>
 
-              <Link
-                to="/er-em-ms"
-                className="homeAssociations__secondaryLink"
-              >
-                Entender a organização estadual
-              </Link>
-            </div>
-          </div>
+        <Link
+          to="/er-em-ms"
+          className="homeAssociations__secondaryLink"
+        >
+          Entender a organização estadual
+          <ArrowRight size={16} />
+        </Link>
+      </div>
+    </div>
 
-          <div className="homeAssociations__visual">
-            <div className="homeAssociations__map">
-              <MapPinned size={64} />
-            </div>
-
-            <div className="homeAssociations__card homeAssociations__card--one">
-              <Network size={21} />
-
-              <div>
-                <strong>Associações regionais</strong>
-                <span>Integração em todo o estado</span>
-              </div>
-            </div>
-
-            <div className="homeAssociations__card homeAssociations__card--two">
-              <Users size={21} />
-
-              <div>
-                <strong>Embaixadas locais</strong>
-                <span>Igrejas trabalhando em conjunto</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
+    <MsAssociationsMap />
+  </div>
+</section>
       <section className="homeNews">
         <div className="homeContainer">
           <div className="homeSectionHeader homeSectionHeader--inline">

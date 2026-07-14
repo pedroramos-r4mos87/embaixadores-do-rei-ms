@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre/Sobre";
-import ErEmMs from "../pages/ErEmMs/ErEmMs";
+import ErNoMs from "../pages/ErNoMs/ErNoMs";
 import Associacoes from "../pages/Associacoes/Associacoes";
 import Noticias from "../pages/Noticias/Noticias";
 import Eventos from "../pages/Eventos/Eventos";
@@ -17,7 +17,7 @@ export default function AppRoutes() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
-          <Route path="/er-em-ms" element={<ErEmMs />} />
+          <Route path="/er-no-ms" element={<ErNoMs />} />
           <Route path="/associacoes" element={<Associacoes />} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/eventos" element={<Eventos />} />

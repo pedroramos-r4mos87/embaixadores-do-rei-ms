@@ -1,0 +1,269 @@
+.msAssociationsMap {
+  width: 100%;
+  padding: 26px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(180px, 0.85fr);
+  align-items: center;
+  gap: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.msAssociationsMap__visual {
+  position: relative;
+  min-width: 0;
+}
+
+.msAssociationsMap__svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.msAssociationsMap__municipality {
+  vector-effect: non-scaling-stroke;
+  stroke: rgba(255, 255, 255, 0.35);
+  stroke-width: 0.8;
+
+  transition:
+    fill 0.2s ease,
+    opacity 0.2s ease,
+    stroke 0.2s ease,
+    filter 0.2s ease;
+}
+
+.msAssociationsMap__municipality--active-region {
+  cursor: pointer;
+}
+
+.msAssociationsMap__municipality--centro {
+  fill: #f4c430;
+}
+
+.msAssociationsMap__municipality--pantanal {
+  fill: #ffe27a;
+}
+
+.msAssociationsMap__municipality--sul {
+  fill: #dcae20;
+}
+
+.msAssociationsMap__municipality--inactive-region,
+.msAssociationsMap__municipality--unmapped {
+  fill: rgba(255, 255, 255, 0.08);
+}
+
+.msAssociationsMap__municipality--hovered {
+  fill: #ffffff;
+  stroke: #061c3f;
+  stroke-width: 1.8;
+  filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.24));
+}
+
+.msAssociationsMap__municipality--dimmed {
+  opacity: 0.24;
+}
+
+.msAssociationsMap__tooltip {
+  position: absolute;
+  z-index: 20;
+
+  min-width: 205px;
+  padding: 14px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  border: 1px solid rgba(244, 196, 48, 0.42);
+  border-radius: 14px;
+
+  background: #04162f;
+  color: #ffffff;
+
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.34);
+  pointer-events: none;
+
+  transform: translate(14px, 14px);
+}
+
+.msAssociationsMap__tooltipCity {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 11px;
+}
+
+.msAssociationsMap__tooltip strong {
+  font-size: 14px;
+}
+
+.msAssociationsMap__tooltipStatus {
+  margin-top: 3px;
+  color: #f4c430;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.msAssociationsMap__tooltipCount {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 12px;
+}
+
+.msAssociationsMap__tooltipInactive {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 12px;
+}
+
+.msAssociationsMap__legend {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.msAssociationsMap__summary {
+  min-height: 72px;
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  border-radius: 17px;
+  background: #f4c430;
+  color: #061c3f;
+}
+
+.msAssociationsMap__summary > strong {
+  font-size: 34px;
+  line-height: 1;
+}
+
+.msAssociationsMap__summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.msAssociationsMap__summary span {
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.msAssociationsMap__summary small {
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.msAssociationsMap__regions {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.msAssociationsMap__regionButton {
+  width: 100%;
+  min-height: 59px;
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+
+  background: rgba(4, 20, 44, 0.42);
+  color: #ffffff;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.msAssociationsMap__regionButton:hover,
+.msAssociationsMap__regionButton--selected {
+  transform: translateX(4px);
+  border-color: rgba(244, 196, 48, 0.4);
+  background: rgba(4, 20, 44, 0.68);
+}
+
+.msAssociationsMap__regionMarker {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+}
+
+.msAssociationsMap__regionButton--centro
+  .msAssociationsMap__regionMarker {
+  background: #f4c430;
+}
+
+.msAssociationsMap__regionButton--pantanal
+  .msAssociationsMap__regionMarker {
+  background: #ffe27a;
+}
+
+.msAssociationsMap__regionButton--sul
+  .msAssociationsMap__regionMarker {
+  background: #dcae20;
+}
+
+.msAssociationsMap__regionButton > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.msAssociationsMap__regionButton strong {
+  font-size: 13px;
+}
+
+.msAssociationsMap__regionButton span:last-child {
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 10px;
+}
+
+@media (max-width: 720px) {
+  .msAssociationsMap {
+    grid-template-columns: 1fr;
+  }
+
+  .msAssociationsMap__legend {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .msAssociationsMap__regions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .msAssociationsMap__regionButton:hover,
+  .msAssociationsMap__regionButton--selected {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 500px) {
+  .msAssociationsMap {
+    padding: 18px;
+  }
+
+  .msAssociationsMap__regions {
+    grid-template-columns: 1fr;
+  }
+}
