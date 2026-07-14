@@ -5,6 +5,7 @@ import "./Associacoes.css";
 const associations = [
   {
     id: 1,
+    slug: "centro",
     name: "DAER - ACIBAMS",
     acronym: "Associação Centro de Igrejas Batistas do MS",
     city: "Campo Grande e região Centro do estado",
@@ -12,6 +13,7 @@ const associations = [
   },
   {
     id: 2,
+    slug: "sul",
     name: "DAER - ASSIBAS",
     acronym: "Associação Sul de Igrejas Batistas do MS",
     city: "Dourados e região sul do estado",
@@ -19,6 +21,7 @@ const associations = [
   },
   {
     id: 3,
+    slug: "pantanal",
     name: "DAER - ASSIBAP",
     acronym: "Associação Pantanal de Igrejas Batistas do MS",
     city: "Corumbá, Ladário e região pantaneira do estado",
@@ -84,10 +87,13 @@ export default function Associacoes() {
 
                 <p>{association.embassies}</p>
 
-                <Link to={`/associacoes/${association.id}`}>
-                  Ver associação
+                <Link
+                  to={`/associacoes/${association.slug}`}
+                  className="associationCard__link"
+                >
+                  Conhecer associação
                   <ArrowRight size={17} />
-                </Link>
+              </Link>
               </article>
             ))}
           </div>

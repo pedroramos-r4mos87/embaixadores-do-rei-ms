@@ -1,17 +1,106 @@
 export const associationRegions = {
   centro: {
-    id: "centro",
-    name: "Associação Centro",
-    active: true,
-    embassies: 18,
-    cities: [
-      "Campo Grande",
-      "Sidrolândia",
-      "Corguinho",
-      "Ribas do Rio Pardo",
-      "Terenos",
-    ],
+  id: "centro",
+  slug: "centro",
+
+  name: "Associação Centro",
+  shortName: "Centro",
+
+  fullName:
+    "Departamento Associacional dos Embaixadores do Rei da Associação Centro de Igrejas Batistas de Mato Grosso do Sul",
+
+  acronym: "DAER-ACIBAMS",
+
+  active: true,
+  featured: true,
+
+  embassies: 18,
+
+  description:
+    "O DAER-ACIBAMS reúne e acompanha as embaixadas da região Centro de Mato Grosso do Sul, promovendo integração, formação bíblica, atividades esportivas e fortalecimento do trabalho associacional.",
+
+  history: [
+    "O Departamento Associacional dos Embaixadores do Rei da Associação Centro de Igrejas Batistas de Mato Grosso do Sul foi organizado em 2015.",
+    "Um dos marcos de sua história foi a realização do primeiro Acampamento Associacional dos Embaixadores do Rei, no Acampamento Batista de Piraputanga.",
+    "O DAER-ACIBAMS engloba as embaixadas da região Centro e promove ações que aproximam embaixadores, conselheiros e igrejas.",
+    "Entre suas principais atividades está o GINCAER — Gincana Associacional dos Embaixadores do Rei —, uma competição que estimula os encontros entre as embaixadas por meio de provas bíblicas e esportivas.",
+  ],
+
+  cities: [
+    "Campo Grande",
+    "Corguinho",
+    "Ribas do Rio Pardo",
+    "Sidrolândia",
+    "Terenos",
+  ],
+
+  churches: [],
+
+  leadership: [
+    {
+      id: 1,
+      name: "Leandro Almeida",
+      role: "Coordenador Associacional",
+      church: "Terceira Igreja Batista de Campo Grande",
+      image: "",
+    },
+    {
+      id: 2,
+      name: "Pedro Ramos",
+      role: "Coordenador de Eventos",
+      church: "Segunda Igreja Batista de Campo Grande",
+      image: "",
+    },
+    {
+      id: 3,
+      name: "João Segatto",
+      role: "Coordenador de Formação",
+      church: "Igreja Batista Filadélfia",
+      image: "",
+    },
+    {
+      id: 4,
+      name: "João Brites",
+      role: "Tesoureiro",
+      church: "Segunda Igreja Batista de Campo Grande",
+      image: "",
+    },
+    {
+      id: 5,
+      name: "Daniel Amaral",
+      role: "Coordenador de Comunicação",
+      church: "Igreja Batista Filadélfia",
+      image: "",
+    },
+    {
+      id: 6,
+      name: "Henrique Ramos",
+      role: "Representante do DAER",
+      church: "Igreja Batista Jardim Pacaembu",
+      image: "",
+    },
+  ],
+
+  contacts: {
+    instagram: "https://www.instagram.com/daer.acibams",
+    instagramHandle: "@daer.acibams",
+    whatsapp: "",
+    email: "",
   },
+
+  events: [
+    {
+      id: 1,
+      title: "3ª Etapa do GINCAER",
+      date: "2026-07-25",
+      displayDate: "25 de julho de 2026",
+      location: "A confirmar",
+      category: "Associacional",
+      description:
+        "Etapa da Gincana Associacional dos Embaixadores do Rei, com competições bíblicas, esportivas e momentos de integração entre as embaixadas.",
+    },
+  ],
+},
 
   pantanal: {
     id: "pantanal",

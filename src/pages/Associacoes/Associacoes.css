@@ -170,6 +170,30 @@
   font-size: 23px;
 }
 
+.associationCard__link {
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #0b3b78;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.associationCard__link:hover {
+  gap: 12px;
+  color: #1559a6;
+}
+
 .associationCard__location {
   display: flex;
   align-items: center;

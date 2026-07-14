@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import Sobre from "../pages/Sobre/Sobre";
 import ErNoMs from "../pages/ErNoMs/ErNoMs";
 import Associacoes from "../pages/Associacoes/Associacoes";
+import AssociacaoDetalhes from "../pages/AssociacaoDetalhes/AssociacaoDetalhes";
 import Noticias from "../pages/Noticias/Noticias";
 import NoticiasDetalhes from "../pages/NoticiasDetalhes/NoticiasDetalhes";
 import Eventos from "../pages/Eventos/Eventos";
@@ -22,6 +23,7 @@ export default function AppRoutes() {
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/er-no-ms" element={<ErNoMs />} />
           <Route path="/associacoes" element={<Associacoes />} />
+          <Route path="/associacoes/:slug" element={<AssociacaoDetalhes />} />
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/noticias/:slug" element={<NoticiasDetalhes />} />
           <Route path="/eventos" element={<Eventos />} />
