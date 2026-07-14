@@ -1,20 +1,116 @@
-// src/data/news.js
-
 export const news = [
   {
     id: 1,
-    title: "Etapa estadual dos Embaixadores do Rei",
-    description:
-      "Confira as informações e a programação da próxima etapa estadual.",
-    image: "/images/noticia-etapa.jpg",
-    date: "25 de julho de 2026",
+    slug: "etapa-estadual-dos-embaixadores-do-rei",
+    title: "Etapa Estadual reúne Embaixadores do Rei em Campo Grande",
+    summary:
+      "Programação terá provas bíblicas, atletismo, jogos de salão e momentos de comunhão entre as embaixadas.",
+    content: [
+      "A próxima Etapa Estadual dos Embaixadores do Rei acontecerá em Campo Grande e reunirá embaixadas de diferentes regiões de Mato Grosso do Sul.",
+      "A programação terá início com um momento devocional e seguirá com provas de atletismo, competições bíblicas, jogos de salão e futsal.",
+      "O encontro busca fortalecer a comunhão entre os embaixadores, incentivar o conhecimento bíblico e promover uma experiência saudável de integração entre igrejas e associações.",
+    ],
+    category: "Eventos",
+    date: "2026-07-15",
+    displayDate: "15 de julho de 2026",
+    readingTime: "3 min de leitura",
+    author: "Departamento Estadual",
+    featured: true,
+    image: "",
   },
   {
     id: 2,
-    title: "Novos materiais disponíveis",
-    description:
-      "Acesse os novos materiais de apoio para conselheiros e embaixadas.",
-    image: "/images/noticia-materiais.jpg",
-    date: "10 de julho de 2026",
+    slug: "portal-estadual-dos-er-em-desenvolvimento",
+    title: "Novo portal estadual dos ER está em desenvolvimento",
+    summary:
+      "O site reunirá informações, materiais, eventos, notícias e conteúdos das associações de Mato Grosso do Sul.",
+    content: [
+      "O Departamento Estadual está desenvolvendo um novo portal para centralizar informações importantes dos Embaixadores do Rei em Mato Grosso do Sul.",
+      "O site contará com páginas institucionais, calendário de eventos, notícias, materiais para download e informações sobre as associações ativas.",
+      "Em uma etapa futura, o portal também terá uma área exclusiva para conselheiros e integração com o sistema de gerenciamento das embaixadas.",
+    ],
+    category: "Institucional",
+    date: "2026-07-12",
+    displayDate: "12 de julho de 2026",
+    readingTime: "2 min de leitura",
+    author: "Equipe de Comunicação",
+    featured: false,
+    image: "",
+  },
+  {
+    id: 3,
+    slug: "novos-materiais-para-conselheiros",
+    title: "Novos materiais de apoio serão disponibilizados aos conselheiros",
+    summary:
+      "Documentos, estudos e recursos serão organizados em uma área específica do portal.",
+    content: [
+      "Uma nova área de materiais está sendo preparada para auxiliar conselheiros e lideranças no trabalho desenvolvido nas embaixadas locais.",
+      "Os conteúdos serão organizados por categorias e poderão incluir estudos bíblicos, documentos oficiais, formulários, manuais e recursos de identidade visual.",
+      "A proposta é facilitar o acesso a materiais importantes e fortalecer a formação dos líderes em todo o estado.",
+    ],
+    category: "Materiais",
+    date: "2026-07-10",
+    displayDate: "10 de julho de 2026",
+    readingTime: "2 min de leitura",
+    author: "Departamento Estadual",
+    featured: false,
+    image: "",
+  },
+  {
+    id: 4,
+    slug: "associacoes-ativas-no-mato-grosso-do-sul",
+    title: "Três associações mantêm atuação ativa dos ER no estado",
+    summary:
+      "Centro, Pantanal e Sul integram igrejas, conselheiros e embaixadas em diferentes regiões.",
+    content: [
+      "Atualmente, os Embaixadores do Rei contam com três associações ativas em Mato Grosso do Sul: Centro, Pantanal e Sul.",
+      "Cada associação contribui para aproximar as embaixadas locais, organizar eventos e fortalecer o relacionamento entre conselheiros e lideranças.",
+      "O novo portal contará com um mapa interativo para apresentar a abrangência territorial e facilitar o acesso às informações de cada associação.",
+    ],
+    category: "Associações",
+    date: "2026-07-08",
+    displayDate: "8 de julho de 2026",
+    readingTime: "3 min de leitura",
+    author: "Departamento Estadual",
+    featured: false,
+    image: "",
+  },
+  {
+    id: 5,
+    slug: "formacao-de-lideres-fortalece-embaixadas",
+    title: "Formação de líderes fortalece o trabalho das embaixadas",
+    summary:
+      "Capacitações ajudam conselheiros a desenvolver um trabalho bíblico, organizado e relevante.",
+    content: [
+      "A formação de conselheiros é uma das prioridades do trabalho estadual dos Embaixadores do Rei.",
+      "Encontros, treinamentos e materiais de apoio ajudam líderes a desenvolver reuniões mais organizadas, bíblicas e conectadas com a realidade dos meninos.",
+      "O fortalecimento das lideranças locais contribui diretamente para o crescimento saudável das embaixadas.",
+    ],
+    category: "Formação",
+    date: "2026-07-05",
+    displayDate: "5 de julho de 2026",
+    readingTime: "2 min de leitura",
+    author: "Equipe de Formação",
+    featured: false,
+    image: "",
+  },
+  {
+    id: 6,
+    slug: "embaixadas-em-movimento",
+    title: "Embaixadas em movimento por todo Mato Grosso do Sul",
+    summary:
+      "Atividades locais mostram a força do trabalho desenvolvido nas igrejas e associações.",
+    content: [
+      "Em diferentes cidades do estado, embaixadas realizam reuniões, estudos bíblicos, ações missionárias e atividades esportivas.",
+      "Essas iniciativas mostram que o trabalho dos Embaixadores do Rei acontece principalmente na igreja local, onde meninos são acompanhados e discipulados.",
+      "O portal também será um espaço para divulgar essas ações e valorizar o trabalho desenvolvido pelas embaixadas.",
+    ],
+    category: "Embaixadas",
+    date: "2026-07-02",
+    displayDate: "2 de julho de 2026",
+    readingTime: "3 min de leitura",
+    author: "Equipe de Comunicação",
+    featured: false,
+    image: "",
   },
 ];

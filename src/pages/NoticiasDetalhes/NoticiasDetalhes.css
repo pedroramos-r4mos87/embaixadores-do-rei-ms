@@ -1,0 +1,279 @@
+.articlePage {
+  width: 100%;
+}
+
+.articleContainer {
+  width: min(920px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.articleHero {
+  padding: 78px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 84% 12%,
+      rgba(244, 196, 48, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(120deg, #061c3f, #0b3b78);
+}
+
+.articleBackLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 38px;
+
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.articleBackLink:hover {
+  color: #f4c430;
+}
+
+.articleCategory {
+  color: #f4c430;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.articleHero h1 {
+  margin: 12px 0 20px;
+
+  color: #ffffff;
+  font-size: clamp(40px, 5.5vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.articleHero p {
+  max-width: 780px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.articleMeta {
+  margin-top: 28px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.articleMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+}
+
+.articleBody {
+  position: relative;
+  z-index: 4;
+  margin-top: -58px;
+  padding-bottom: 100px;
+}
+
+.articleCover {
+  min-height: 430px;
+  overflow: hidden;
+
+  border: 7px solid #ffffff;
+  border-radius: 24px;
+
+  background: #dce8f7;
+  box-shadow: 0 24px 55px rgba(11, 59, 120, 0.15);
+}
+
+.articleCover img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+.articleCover__placeholder {
+  min-height: 430px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(244, 196, 48, 0.24),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #061c3f, #1559a6);
+
+  color: #f4c430;
+}
+
+.articleCover__placeholder span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.articleContent {
+  max-width: 760px;
+  margin: 66px auto 0;
+}
+
+.articleContent p {
+  margin: 0 0 24px;
+
+  color: #42536b;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.articleContent p:first-child::first-letter {
+  float: left;
+  margin: 8px 10px 0 0;
+
+  color: #0b3b78;
+  font-size: 62px;
+  font-weight: 900;
+  line-height: 0.78;
+}
+
+.articleFooter {
+  max-width: 760px;
+  margin: 55px auto 0;
+  padding-top: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  border-top: 1px solid #dce4ef;
+}
+
+.articleFooter > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.articleFooter span {
+  color: #7b8799;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.articleFooter strong {
+  color: #10213d;
+}
+
+.articleFooter a {
+  color: #0b3b78;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.articleNotFound {
+  min-height: 65vh;
+  padding: 100px 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.articleNotFound svg {
+  color: #0b3b78;
+}
+
+.articleNotFound h1 {
+  margin: 20px 0 8px;
+}
+
+.articleNotFound p {
+  margin: 0;
+  color: #64748b;
+}
+
+.articleNotFound a {
+  margin-top: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #0b3b78;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (max-width: 600px) {
+  .articleContainer {
+    width: calc(100% - 24px);
+  }
+
+  .articleHero {
+    padding: 62px 0 90px;
+    text-align: center;
+  }
+
+  .articleBackLink {
+    margin-inline: auto;
+  }
+
+  .articleHero h1 {
+    font-size: 40px;
+  }
+
+  .articleHero p {
+    font-size: 16px;
+  }
+
+  .articleMeta {
+    justify-content: center;
+  }
+
+  .articleBody {
+    margin-top: -38px;
+    padding-bottom: 72px;
+  }
+
+  .articleCover,
+  .articleCover img,
+  .articleCover__placeholder {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .articleContent {
+    margin-top: 46px;
+  }
+
+  .articleContent p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .articleFooter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
