@@ -7,7 +7,6 @@ import {
   Users,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoEr from "../../assets/images/logo-er.png";
 import "./ErNoMs.css";
 
 const stateAreas = [
@@ -62,8 +61,27 @@ export default function ErEmMs() {
           </div>
 
           <div className="stateHero__visual">
-            <div className="stateHero__logo">
-              <img src={logoEr} alt="Embaixadores do Rei" />
+            <div className="erMsHero__logoCircle">
+              <div className="erMsHero__mapWrap">
+                <svg
+                  viewBox="0 0 614 628"
+                  className="erMsHero__map"
+                  aria-label="Mapa de Mato Grosso do Sul"
+                  role="img"
+                >
+                  <path
+                    className="erMsHero__mapShape"
+                    d="M 33 43 L 57 98 L 35 156 L 39 171 L 5 234 L 21 261 L 0 277 L 22 318 L 15 324 L 26 352 L 17 450 L 112 461 L 143 445 L 161 462 L 193 465 L 218 506 L 234 619 L 302 609 L 331 628 L 387 524 L 483 456 L 555 338 L 557 316 L 607 267 L 614 205 L 491 141 L 449 131 L 440 120 L 450 105 L 428 100 L 427 81 L 355 62 L 376 12 L 352 40 L 332 44 L 307 28 L 262 43 L 175 0 L 123 14 L 95 50 L 68 62 Z"
+                  />
+
+                  <line className="erMsHero__mapLine" x1="250" y1="280" x2="205" y2="185" />
+                  <line className="erMsHero__mapLine" x1="250" y1="280" x2="430" y2="225" />
+
+                  <circle className="erMsHero__mapPoint" cx="205" cy="185" r="12" />
+                  <circle className="erMsHero__mapPoint" cx="250" cy="280" r="12" />
+                  <circle className="erMsHero__mapPoint" cx="430" cy="225" r="12" />
+                </svg>
+              </div>
             </div>
 
             <div className="stateHero__badge">

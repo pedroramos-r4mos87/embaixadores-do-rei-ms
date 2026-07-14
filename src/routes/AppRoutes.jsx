@@ -11,6 +11,7 @@ import Eventos from "../pages/Eventos/Eventos";
 import EventoDetalhes from "../pages/EventoDetalhes/EventoDetalhes";
 import Materiais from "../pages/Materiais/Materiais";
 import Login from "../pages/Login/Login";
+import NotFound from "../pages/NotFound/NotFound";
 
 export default function AppRoutes() {
   return (
@@ -27,6 +28,7 @@ export default function AppRoutes() {
           <Route path="/eventos/:slug" element={<EventoDetalhes />} />
           <Route path="/materiais" element={<Materiais />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

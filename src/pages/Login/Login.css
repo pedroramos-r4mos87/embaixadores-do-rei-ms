@@ -1,0 +1,518 @@
+.counselorPage {
+  width: 100%;
+  background: #ffffff;
+}
+
+.counselorContainer {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.counselorHero {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 84% 20%,
+      rgba(244, 196, 48, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 78%,
+      rgba(255, 255, 255, 0.08),
+      transparent 26%
+    ),
+    linear-gradient(120deg, #061c3f 0%, #122f67 55%, #29477e 100%);
+}
+
+.counselorHero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -180px;
+  bottom: -300px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.counselorHero__layout {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.counselorHero__content {
+  max-width: 750px;
+}
+
+.counselorBackLink {
+  width: fit-content;
+  margin-bottom: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 750;
+
+  transition: color 0.2s ease;
+}
+
+.counselorBackLink:hover {
+  color: #f4c430;
+}
+
+.counselorEyebrow {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 9px 13px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(244, 196, 48, 0.35);
+  border-radius: 999px;
+
+  background: rgba(244, 196, 48, 0.1);
+  color: #ffe174;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.counselorHero h1 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(50px, 6vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.counselorHero__content > p {
+  max-width: 690px;
+  margin: 25px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.counselorStatus {
+  width: fit-content;
+  max-width: 620px;
+  margin-top: 32px;
+  padding: 16px 20px 16px 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 17px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.counselorStatus__icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  background: #f4c430;
+  color: #061c3f;
+}
+
+.counselorStatus > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.counselorStatus strong {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.counselorStatus span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.counselorHero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.counselorLock {
+  position: relative;
+  width: 350px;
+  min-height: 390px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 34px;
+
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+}
+
+.counselorLock__glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+  background: rgba(244, 196, 48, 0.18);
+  filter: blur(42px);
+}
+
+.counselorLock__circle {
+  position: relative;
+  z-index: 2;
+
+  width: 190px;
+  height: 190px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(244, 196, 48, 0.35);
+  border-radius: 50%;
+
+  background: rgba(6, 28, 63, 0.55);
+  color: #f4c430;
+
+  box-shadow:
+    inset 0 0 40px rgba(244, 196, 48, 0.08),
+    0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.counselorLock > span {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 27px;
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.counselorLock > strong {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 4px;
+
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.counselorResources {
+  padding: 105px 0;
+}
+
+.counselorResources__header {
+  max-width: 780px;
+  margin-bottom: 42px;
+}
+
+.counselorResources__header > span {
+  color: #0b3b78;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.counselorResources__header h2 {
+  margin: 9px 0 15px;
+
+  color: #10213d;
+  font-size: clamp(34px, 4.5vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.counselorResources__header p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.counselorResources__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.counselorResourceCard {
+  min-height: 300px;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #dce4ef;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.counselorResourceCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(11, 59, 120, 0.28);
+  box-shadow: 0 18px 40px rgba(11, 59, 120, 0.09);
+}
+
+.counselorResourceCard__icon {
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 16px;
+
+  background: #edf4ff;
+  color: #0b3b78;
+}
+
+.counselorResourceCard h3 {
+  margin: 24px 0 10px;
+
+  color: #10213d;
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.counselorResourceCard p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.counselorResourceCard > span {
+  margin-top: auto;
+  padding-top: 24px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #8a6810;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.counselorHelp {
+  padding: 90px 0;
+  background: #eef4fa;
+}
+
+.counselorHelp__card {
+  padding: 48px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 45px;
+
+  border-radius: 25px;
+
+  background:
+    radial-gradient(
+      circle at 86% 15%,
+      rgba(244, 196, 48, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(120deg, #061c3f, #0b3b78);
+}
+
+.counselorHelp__card > div > span {
+  color: #f4c430;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.counselorHelp h2 {
+  max-width: 750px;
+  margin: 8px 0 12px;
+
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 45px);
+  line-height: 1.08;
+}
+
+.counselorHelp p {
+  max-width: 720px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.7;
+}
+
+.counselorHelp__button {
+  min-height: 51px;
+  padding: 0 21px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 13px;
+
+  background: #f4c430;
+  color: #061c3f;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.counselorHelp__button:hover {
+  transform: translateY(-2px);
+  background: #ffd650;
+}
+
+@media (max-width: 1000px) {
+  .counselorHero__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .counselorHero__visual {
+    justify-content: flex-start;
+  }
+
+  .counselorResources__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .counselorContainer {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .counselorHelp__card {
+    grid-template-columns: 1fr;
+  }
+
+  .counselorHelp__button {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 560px) {
+  .counselorContainer {
+    width: calc(100% - 24px);
+  }
+
+  .counselorHero {
+    padding: 62px 0 80px;
+    text-align: center;
+  }
+
+  .counselorBackLink,
+  .counselorEyebrow {
+    margin-inline: auto;
+  }
+
+  .counselorHero h1 {
+    font-size: 48px;
+  }
+
+  .counselorHero__content > p {
+    font-size: 16px;
+  }
+
+  .counselorStatus {
+    margin-inline: auto;
+    text-align: left;
+  }
+
+  .counselorHero__visual {
+    justify-content: center;
+  }
+
+  .counselorLock {
+    width: 100%;
+    min-height: 330px;
+  }
+
+  .counselorLock__circle {
+    width: 155px;
+    height: 155px;
+  }
+
+  .counselorResources,
+  .counselorHelp {
+    padding: 72px 0;
+  }
+
+  .counselorResources__header {
+    text-align: center;
+  }
+
+  .counselorResources__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counselorResourceCard {
+    min-height: 270px;
+  }
+
+  .counselorHelp__card {
+    padding: 30px 23px;
+    text-align: center;
+  }
+
+  .counselorHelp__button {
+    width: 100%;
+  }
+}

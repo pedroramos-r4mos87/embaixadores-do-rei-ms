@@ -94,6 +94,40 @@
   gap: 12px;
 }
 
+.erMsHero__mapWrap {
+  width: min(72%, 290px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erMsHero__map {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.erMsHero__mapShape {
+  fill: rgba(244, 196, 48, 0.18);
+  stroke: #f4c430;
+  stroke-width: 10;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.erMsHero__mapLine {
+  stroke: rgba(244, 196, 48, 0.55);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.erMsHero__mapPoint {
+  fill: #f4c430;
+  stroke: #ffffff;
+  stroke-width: 6;
+}
+
+
 .stateButton {
   min-height: 50px;
   padding: 0 21px;
@@ -369,9 +403,26 @@
     min-height: 300px;
   }
 
-  .stateHero__logo {
-    width: 240px;
+  .erMsHero__logoCircle {
+    width: 260px;
   }
+
+  .erMsHero__mapWrap {
+    width: 90%;
+  }
+
+  .erMsHero__mapShape {
+    stroke-width: 8;
+  }
+
+  .erMsHero__mapLine {
+    stroke-width: 5;
+  }
+
+  .erMsHero__mapPoint {
+    stroke-width: 5;
+  }
+
 
   .stateHero__badge {
     right: 50%;
