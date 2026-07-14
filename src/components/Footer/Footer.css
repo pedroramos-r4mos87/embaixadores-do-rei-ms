@@ -1,0 +1,170 @@
+.siteFooter {
+  width: 100%;
+}
+
+.siteFooter__yellowLine {
+  width: 100%;
+  height: 5px;
+  background: #f4c430;
+}
+
+.siteFooter__main {
+  padding: 68px 0;
+
+  background:
+    linear-gradient(120deg, #04152f 0%, #061c3f 100%);
+}
+
+.siteFooter__container {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 0.7fr 0.7fr 1fr;
+  gap: 60px;
+}
+
+.siteFooter__brand {
+  max-width: 400px;
+}
+
+.siteFooter__logoLink {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.siteFooter__logo {
+  width: 62px;
+  height: 62px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.siteFooter__logo img {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+}
+
+.siteFooter__logoLink > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.siteFooter__logoLink strong {
+  font-size: 17px;
+}
+
+.siteFooter__logoLink span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+}
+
+.siteFooter__brand > p {
+  margin: 22px 0 0;
+
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+}
+
+.siteFooter__column h2 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.siteFooter__column nav {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.siteFooter__column nav a,
+.siteFooter__contact a,
+.siteFooter__contact span {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  font-size: 13px;
+
+  transition: color 0.2s ease;
+}
+
+.siteFooter__column nav a:hover,
+.siteFooter__contact a:hover {
+  color: #f4c430;
+}
+
+.siteFooter__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.siteFooter__contact h2 {
+  margin-bottom: 5px;
+}
+
+.siteFooter__contact a,
+.siteFooter__contact span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.siteFooter__bottom {
+  padding: 19px 0;
+  background: #020d1e;
+}
+
+.siteFooter__bottomContent {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  color: rgba(255, 255, 255, 0.44);
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .siteFooter__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .siteFooter__main {
+    padding: 52px 0;
+  }
+
+  .siteFooter__container,
+  .siteFooter__bottomContent {
+    width: calc(100% - 32px);
+  }
+
+  .siteFooter__container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .siteFooter__bottomContent {
+    flex-direction: column;
+    text-align: center;
+  }
+}

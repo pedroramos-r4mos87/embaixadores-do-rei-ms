@@ -1,0 +1,257 @@
+.associationsPage {
+  width: 100%;
+}
+
+.associationsContainer {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.associationsHero {
+  padding: 92px 0;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(244, 196, 48, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(118deg, #061c3f 0%, #0b3b78 65%, #1559a6 100%);
+}
+
+.associationsEyebrow {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 9px 13px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(244, 196, 48, 0.3);
+  border-radius: 999px;
+
+  background: rgba(244, 196, 48, 0.1);
+  color: #ffe174;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.associationsHero h1 {
+  max-width: 850px;
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.04;
+  letter-spacing: -0.05em;
+}
+
+.associationsHero p {
+  max-width: 700px;
+  margin: 22px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.associationsContent {
+  padding: 86px 0 100px;
+}
+
+.associationsIntro {
+  margin-bottom: 38px;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.associationsIntro span {
+  color: #0b3b78;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.associationsIntro h2 {
+  margin: 7px 0 0;
+
+  color: #10213d;
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing: -0.04em;
+}
+
+.associationsSearch {
+  width: min(100%, 390px);
+  min-height: 48px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  border: 1px solid #dce4ef;
+  border-radius: 13px;
+
+  background: #ffffff;
+  color: #64748b;
+}
+
+.associationsSearch input {
+  width: 100%;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+  color: #10213d;
+}
+
+.associationsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.associationCard {
+  min-height: 320px;
+  padding: 27px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #dce4ef;
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.associationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 42px rgba(11, 59, 120, 0.1);
+}
+
+.associationCard__icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+  background: #edf4ff;
+  color: #0b3b78;
+}
+
+.associationCard__type {
+  margin-top: 23px;
+
+  color: #0b3b78;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.associationCard h2 {
+  margin: 8px 0 13px;
+  color: #10213d;
+  font-size: 23px;
+}
+
+.associationCard__location {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #64748b;
+  font-size: 13px;
+}
+
+.associationCard p {
+  margin: 18px 0 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.associationCard a {
+  margin-top: auto;
+  padding-top: 23px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #0b3b78;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.associationsNotice {
+  margin-top: 34px;
+  padding: 24px;
+
+  border: 1px solid rgba(244, 196, 48, 0.35);
+  border-radius: 17px;
+
+  background: rgba(244, 196, 48, 0.1);
+}
+
+.associationsNotice strong {
+  color: #10213d;
+}
+
+.associationsNotice p {
+  margin: 7px 0 0;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .associationsIntro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .associationsSearch {
+    width: 100%;
+  }
+
+  .associationsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .associationsContainer {
+    width: calc(100% - 24px);
+  }
+
+  .associationsHero {
+    padding: 68px 0;
+    text-align: center;
+  }
+
+  .associationsEyebrow {
+    margin-inline: auto;
+  }
+
+  .associationsHero h1 {
+    font-size: 42px;
+  }
+
+  .associationsContent {
+    padding: 66px 0 80px;
+  }
+}

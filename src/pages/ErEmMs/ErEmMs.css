@@ -1,0 +1,380 @@
+.statePage {
+  width: 100%;
+}
+
+.stateContainer {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.stateHero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(244, 196, 48, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(118deg, #061c3f 0%, #0b3b78 65%, #1559a6 100%);
+}
+
+.stateHero::after {
+  content: "";
+  position: absolute;
+  right: -180px;
+  bottom: -220px;
+  width: 520px;
+  height: 520px;
+  border: 80px solid rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+}
+
+.stateHero__content {
+  position: relative;
+  z-index: 2;
+  padding: 76px 0;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.stateHero__text {
+  max-width: 760px;
+}
+
+.stateEyebrow {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 9px 13px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid rgba(244, 196, 48, 0.32);
+  border-radius: 999px;
+  background: rgba(244, 196, 48, 0.1);
+  color: #ffe174;
+
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stateHero h1 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.03;
+  letter-spacing: -0.05em;
+}
+
+.stateHero__text > p {
+  max-width: 680px;
+  margin: 24px 0 0;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.stateHero__actions {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stateButton {
+  min-height: 50px;
+  padding: 0 21px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 13px;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.stateButton--yellow {
+  background: #f4c430;
+  color: #061c3f;
+}
+
+.stateButton--outline {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.stateHero__visual {
+  position: relative;
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+}
+
+.stateHero__logo {
+  width: min(300px, 80vw);
+  aspect-ratio: 1;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.24),
+    0 0 0 18px rgba(255, 255, 255, 0.04);
+}
+
+.stateHero__logo img {
+  width: 72%;
+}
+
+.stateHero__badge {
+  position: absolute;
+  right: -5px;
+  bottom: 6px;
+
+  padding: 16px 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 15px;
+
+  background: rgba(6, 28, 63, 0.9);
+  color: #ffffff;
+}
+
+.stateHero__badge svg {
+  color: #f4c430;
+}
+
+.stateHero__badge div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stateHero__badge span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+}
+
+.stateIntro {
+  padding: 88px 0 50px;
+}
+
+.stateIntro__content {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 500px);
+  align-items: end;
+  gap: 70px;
+}
+
+.stateSectionTag {
+  color: #0b3b78;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stateIntro h2,
+.stateStructure__header h2 {
+  margin: 8px 0 0;
+
+  color: #10213d;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.stateIntro p,
+.stateStructure__header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.75;
+}
+
+.stateAreas {
+  padding: 36px 0 96px;
+}
+
+.stateAreas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.stateAreas__card {
+  min-height: 280px;
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #dce4ef;
+  border-radius: 19px;
+
+  background: #ffffff;
+}
+
+.stateAreas__icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+  background: #edf4ff;
+  color: #0b3b78;
+}
+
+.stateAreas__card h2 {
+  margin: 24px 0 10px;
+  color: #10213d;
+  font-size: 22px;
+}
+
+.stateAreas__card p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.stateAreas__card span {
+  margin-top: auto;
+  padding-top: 20px;
+
+  color: #0b3b78;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.stateStructure {
+  padding: 90px 0;
+  background: #eef4fa;
+}
+
+.stateStructure__header {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.stateStructure__header p {
+  margin-top: 16px;
+}
+
+.stateStructure__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.stateStructure__item {
+  padding: 26px;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.stateStructure__item > span {
+  color: #f4c430;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.stateStructure__item h3 {
+  margin: 18px 0 9px;
+  color: #10213d;
+  font-size: 20px;
+}
+
+.stateStructure__item p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .stateHero__content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .stateHero__text {
+    margin: 0 auto;
+  }
+
+  .stateEyebrow {
+    margin-inline: auto;
+  }
+
+  .stateHero__actions {
+    justify-content: center;
+  }
+
+  .stateIntro__content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stateAreas__grid,
+  .stateStructure__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .stateContainer {
+    width: calc(100% - 24px);
+  }
+
+  .stateHero__content {
+    padding: 58px 0 80px;
+  }
+
+  .stateHero h1 {
+    font-size: 42px;
+  }
+
+  .stateHero__actions {
+    flex-direction: column;
+  }
+
+  .stateButton {
+    width: 100%;
+  }
+
+  .stateHero__visual {
+    min-height: 300px;
+  }
+
+  .stateHero__logo {
+    width: 240px;
+  }
+
+  .stateHero__badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

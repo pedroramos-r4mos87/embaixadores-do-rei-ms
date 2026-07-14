@@ -1,0 +1,356 @@
+:root {
+  --er-blue-dark: #061c3f;
+  --er-blue: #0b3b78;
+  --er-blue-light: #1559a6;
+  --er-yellow: #f4c430;
+  --er-yellow-light: #ffe48a;
+  --er-white: #ffffff;
+  --er-text-light: #dce9f8;
+  --er-border: rgba(255, 255, 255, 0.14);
+}
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.siteHeader__topLine {
+  width: 100%;
+  height: 5px;
+  background: var(--er-yellow);
+}
+
+.siteHeader__main {
+  width: 100%;
+  background:
+    linear-gradient(
+      110deg,
+      var(--er-blue-dark) 0%,
+      var(--er-blue) 58%,
+      #0d478d 100%
+    );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(4, 25, 56, 0.16);
+}
+
+.siteHeader__content {
+  width: 100%;
+  min-height: 86px;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.siteHeader__brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: var(--er-white);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.siteHeader__logo {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.16),
+    0 0 0 4px rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+}
+
+.siteHeader__logo img {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+}
+.siteHeader__brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.siteHeader__brandText strong {
+  font-size: 16px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.siteHeader__brandText span {
+  color: var(--er-text-light);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.siteHeader__nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.siteHeader__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.siteHeader__link {
+  position: relative;
+
+  padding: 12px 13px;
+
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 10px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.siteHeader__link:hover {
+  color: var(--er-white);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.siteHeader__link::after {
+  content: "";
+
+  position: absolute;
+  right: 13px;
+  bottom: 6px;
+  left: 13px;
+
+  height: 2px;
+
+  background: var(--er-yellow);
+  border-radius: 999px;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.siteHeader__link--active {
+  color: var(--er-white);
+}
+
+.siteHeader__link--active::after {
+  transform: scaleX(1);
+}
+
+.siteHeader__counselorButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0 19px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+
+  background: var(--er-yellow);
+  color: var(--er-blue-dark);
+
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow: 0 8px 24px rgba(244, 196, 48, 0.17);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.siteHeader__counselorButton:hover {
+  background: #ffd756;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(244, 196, 48, 0.24);
+}
+
+.siteHeader__menuButton {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  place-items: center;
+
+  border: 1px solid var(--er-border);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--er-white);
+
+  cursor: pointer;
+}
+
+.siteHeader__mobileTitle {
+  display: none;
+}
+
+.siteHeader__overlay {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .siteHeader__content {
+    width: 100%;
+    min-height: 76px;
+    padding: 0 20px;
+  }
+
+  .siteHeader__menuButton {
+    display: grid;
+  }
+
+  .siteHeader__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1002;
+
+    width: min(360px, 88vw);
+    height: 100dvh;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+
+    background: var(--er-blue-dark);
+    box-shadow: -24px 0 60px rgba(0, 0, 0, 0.28);
+
+    transform: translateX(105%);
+    transition: transform 0.28s ease;
+  }
+
+  .siteHeader__nav--open {
+    transform: translateX(0);
+  }
+
+  .siteHeader__mobileTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--er-border);
+
+    color: var(--er-white);
+    font-weight: 800;
+  }
+
+  .siteHeader__mobileTitle button {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--er-border);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--er-white);
+
+    cursor: pointer;
+  }
+
+  .siteHeader__links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .siteHeader__link {
+    padding: 15px 16px;
+    font-size: 15px;
+  }
+
+  .siteHeader__link--active {
+    background: rgba(244, 196, 48, 0.12);
+    color: var(--er-yellow);
+  }
+
+  .siteHeader__link::after {
+    display: none;
+  }
+
+  .siteHeader__counselorButton {
+    min-height: 50px;
+    margin-top: auto;
+    font-size: 14px;
+  }
+
+  .siteHeader__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1001;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+    background: rgba(1, 12, 31, 0.64);
+    backdrop-filter: blur(3px);
+
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 560px) {
+  .siteHeader__content {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 14px;
+  }
+
+  .siteHeader__logo {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .siteHeader__brandText strong {
+    font-size: 14px;
+  }
+
+  .siteHeader__brandText span {
+    font-size: 10px;
+  }
+
+  .siteHeader__menuButton {
+    width: 42px;
+    height: 42px;
+  }
+}

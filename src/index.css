@@ -1,0 +1,99 @@
+:root {
+  --er-blue-dark: #061c3f;
+  --er-blue: #0b3b78;
+  --er-blue-light: #1559a6;
+
+  --er-yellow: #f4c430;
+  --er-yellow-light: #ffe48a;
+
+  --er-white: #ffffff;
+
+  --er-text: #41526b;
+  --er-text-dark: #10213d;
+
+  --er-background: #f7f9fc;
+  --er-border: #dce4ef;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  color: var(--er-text);
+  background: var(--er-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+
+  background: var(--er-background);
+  color: var(--er-text);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: var(--er-text-dark);
+  font-family: inherit;
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
