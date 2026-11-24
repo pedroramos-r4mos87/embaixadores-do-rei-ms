@@ -386,6 +386,22 @@
   font-weight: 700;
 }
 
+.materialCard__development {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.materialsPrimaryButton--disabled {
+  cursor: default;
+  opacity: 0.65;
+}
+
 .materialCard__download,
 .materialCard__restrictedLink {
   margin-top: auto;

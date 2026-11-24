@@ -101,14 +101,28 @@ export default function Materiais() {
                   <span>Atualizado em {featuredMaterial.updatedAt}</span>
                 </div>
 
-                <a
-                  href={featuredMaterial.downloadUrl}
-                  className="materialsPrimaryButton"
-                  download
-                >
-                  <Download size={18} />
-                  Baixar material
-                </a>
+              {featuredMaterial.status === "development" ? (
+                  <span className="materialsPrimaryButton materialsPrimaryButton--disabled">
+                    Em desenvolvimento
+                  </span>
+                ) : featuredMaterial.restricted ? (
+                  <Link
+                    to="/login"
+                    className="materialsPrimaryButton"
+                  >
+                    <LockKeyhole size={18} />
+                    Acesso para conselheiros
+                  </Link>
+                ) : (
+                  <a
+                    href={featuredMaterial.downloadUrl}
+                    className="materialsPrimaryButton"
+                    download
+                  >
+                    <Download size={18} />
+                    Baixar material
+                  </a>
+                )}
               </div>
             </article>
           </div>
@@ -192,7 +206,12 @@ export default function Materiais() {
                       <span>{material.updatedAt}</span>
                     </div>
 
-                    {material.restricted ? (
+                    {material.status === "development" ?(
+                      <span className="materialCard__development">
+                        Em desenvolvimento
+                      </span>
+                    
+                    ) : material.restricted ? (
                       <Link
                         to="/login"
                         className="materialCard__restrictedLink"
